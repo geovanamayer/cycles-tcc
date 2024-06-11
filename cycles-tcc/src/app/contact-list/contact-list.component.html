@@ -1,0 +1,8 @@
+<div *ngFor="let contact of contacts$ | async">
+  <h3>{{ contact.name }}</h3>
+  <p>Email: {{ contact.email }}</p>
+  <p>Advice: {{ contact.advice }}</p>
+  <p>Abuse: {{ contact.abuse }}</p>
+  <p>Partner: {{ contact.partner }}</p>
+  <p>Daughter: {{ contact.daughter }}</p>
+</div>
