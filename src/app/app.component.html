@@ -1,24 +1,24 @@
 <header>
   <div class="cab">
     <h1>Cycles</h1>
-    <div class="img-cabecalho"></div>
+    <div class="img-cabecalho">
+      <!-- Aqui você pode adicionar imagens ou outros elementos conforme necessário -->
+    </div>
   </div>
 </header>
 
 <div class="container">
   <section class="section-content">
-    <h2 class="section-title">O Ciclos</h2>
-    <p>Site feito para você mulher!!</p>
+    <h2 class="section-title">O Ciclo</h2>
+    <p>Site feito para você, mulher!!</p>
   </section>
 
   <div class="content-wrapper">
     <div class="img-cab">
-      <!-- <img src="assets/women1.png" alt="Women Image"> -->
+      <img src="assets/women1.png" alt="Women Image">
     </div>
 
     <h2 class="section-title">Dicas sobre seu ciclo menstrual</h2>
-    <br>
-    <br>
     <img src="assets/3d-ca.png" alt="saude"> 
 
     <div class="tips">
@@ -30,16 +30,6 @@
         <h3>Dica 2</h3>
         <p>Cuide da sua saúde geral: Manter uma boa saúde geral é essencial para um ciclo menstrual saudável. Certifique-se de ter uma dieta equilibrada, rica em nutrientes, incluindo vitaminas e minerais importantes, como ferro e cálcio.</p>
       </div>
-      <div class="tip-card dica3">
-        <h3>Dica 3</h3>
-        <p>Converse com um profissional de saúde: Se você tiver dúvidas ou preocupações sobre seu ciclo menstrual, é sempre recomendável buscar orientação de um profissional de saúde, como um médico ginecologista.</p>
-      </div>
-
-      <div class="tip-card dica3">
-        <h3>Dica 3</h3>
-        <p>Converse com um profissional de saúde: Se você tiver dúvidas ou preocupações sobre seu ciclo menstrual, é sempre recomendável buscar orientação de um profissional de saúde, como um médico ginecologista.</p>
-      </div>
-
       <div class="tip-card dica3">
         <h3>Dica 3</h3>
         <p>Converse com um profissional de saúde: Se você tiver dúvidas ou preocupações sobre seu ciclo menstrual, é sempre recomendável buscar orientação de um profissional de saúde, como um médico ginecologista.</p>
@@ -61,13 +51,16 @@
         <a href="https://scooto.co/a-escuta-e-o-primeiro-passo-para-trilhar-o-caminho-de-sucesso/" target="_blank">clique aqui</a>
       </div>
       <div class="tip-card ajuda3">
-        <h3>Saude</h3>
+        <h3>Saúde</h3>
         <a href="https://cdd.org.br/saude-da-mulher/?gad_source=1&gclid=Cj0KCQjwsPCyBhD4ARIsAPaaRf1qwKQy3jJuf7YX8aIZ37ZcG0-GCIuYz_rn9ay5ZQy-5VeNyornzUsaAmSOEALw_wcB" target="_blank">clique aqui</a>
       </div>
     </div>
   </section>
 </div>
-
+<div class="container">
+  <router-outlet></router-outlet> <!-- Onde os componentes serão renderizados -->
+</div>
 <div class="form">
   <app-contact-form></app-contact-form>
 </div>
+

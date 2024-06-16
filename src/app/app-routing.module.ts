@@ -1,10 +1,14 @@
-// app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+
+// Importe os componentes que serão usados nas rotas
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AppComponent } from './app.component'; // home
 
 const routes: Routes = [
-  { path: '', component: AppComponent } // rotas
+  { path: '', redirectTo: '/home', pathMatch: 'full' },  //home
+  { path: 'app', component: AppComponent },
+  { path: 'contact-form', component: ContactFormComponent },
 ];
 
 @NgModule({

@@ -1,25 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-// import { firebaseConfig } from 'src/firebase/firebase-config';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module'; // Importe o AppRoutingModule
 
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { ContactListComponent } from './contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
-    ContactListComponent
+    AppComponent// Declare o componente home aqui
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

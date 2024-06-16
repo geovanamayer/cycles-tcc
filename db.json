@@ -1,0 +1,16 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "email": "alice@example.com",
+      "advice": "Fique calma e siga em frente"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "email": "bob@example.com",
+      "advice": "Mantenha-se saudável"
+    }
+  ]
+}

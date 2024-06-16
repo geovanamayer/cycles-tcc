@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,24 +6,22 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    // Inicializa o FormGroup com campos e validações
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      advice: ['', Validators.required]
+      message: ['', Validators.required]
     });
   }
 
+  ngOnInit(): void {}
+
   onSubmit(): void {
     if (this.contactForm.valid) {
-      // Imprime os valores do formulário no console
       console.log('Form Submitted', this.contactForm.value);
-      // Reseta o formulário após a submissão
-      this.contactForm.reset();
     }
   }
 }

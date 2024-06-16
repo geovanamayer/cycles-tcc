@@ -4,26 +4,26 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent], // Correctly declare AppComponent
+      declarations: [(AppComponent)], 
     }).compileComponents();
   });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy(); 
+    expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Cycles' title`, () => { // Correct expected title to 'Cycles'
+  it(`should have the 'Cycles' title`, () => { 
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Cycles'); // Correct title to 'Cycles'
+    expect(app.title).toEqual('Cycles'); 
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Cycles'); // Correct expected content
-  });
+     const fixture = TestBed.createComponent(AppComponent);
+     fixture.detectChanges();
+     const compiled = fixture.nativeElement as HTMLElement;
+     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Cycles'); // Correct expected content
+   });
 });

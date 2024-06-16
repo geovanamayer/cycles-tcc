@@ -1,27 +1,21 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Seu primeiro nome:</label>
-    <input id="name" formControlName="name">
-    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-      O nome é obrigatório.
-    </div>
+  <label for="name">Name:</label>
+  <input id="name" formControlName="name">
+  <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">
+    Name is required.
   </div>
 
-  <div>
-    <label for="email">Email:</label>
-    <input id="email" formControlName="email">
-    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-      Insira um email válido.
-    </div>
+  <label for="email">Email:</label>
+  <input id="email" formControlName="email">
+  <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
+    Enter a valid email.
   </div>
 
-  <div>
-    <label for="advice">Qual conselho você gostaria de receber?</label>
-    <input id="advice" formControlName="advice">
-    <div *ngIf="contactForm.get('advice')?.invalid && contactForm.get('advice')?.touched">
-      O conselho é obrigatório.
-    </div>
+  <label for="message">Message:</label>
+  <input id="message" formControlName="message">
+  <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">
+    Message is required.
   </div>
 
-  <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+  <button type="submit" [disabled]="contactForm.invalid">Submit</button>
 </form>
